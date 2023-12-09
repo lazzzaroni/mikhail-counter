@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,8 +8,20 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import tailwindStylesheetUrl from "./styles/tailwind.css";
+import faviconAssetUrl from "./assets/favicon.svg";
+import fontStylesheetUrl from "./assets/fonts/inter/inter.css";
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Mikhail Counter" },
+    { name: "description", content: "Mikhail Counter" },
+  ];
+};
 export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/svg+xml", href: faviconAssetUrl },
+  { rel: "stylesheet", href: tailwindStylesheetUrl },
+  { rel: "stylesheet", href: fontStylesheetUrl },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
