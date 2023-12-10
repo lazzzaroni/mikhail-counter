@@ -8,9 +8,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import fontStylesheetUrl from "./styles/font.css";
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import faviconAssetUrl from "./assets/favicon.svg";
-import fontStylesheetUrl from "./assets/fonts/inter/inter.css";
 
 export const meta: MetaFunction = () => {
   return [
