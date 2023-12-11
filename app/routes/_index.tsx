@@ -2,7 +2,7 @@ export default function Index() {
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="text-2xl">Mikhail Counter</h1>
-      <p>10</p>
+      <p>11</p>
     </div>
   );
 }
