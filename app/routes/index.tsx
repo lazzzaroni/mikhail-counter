@@ -1,8 +1,10 @@
 export default function Index() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-2xl">Mikhail Counter</h1>
-      <p>12</p>
-    </div>
+    <>
+      <section className="mx-auto flex size-72 flex-col items-center justify-center gap-12">
+        <h1 className="text-2xl">Mikhail Counter</h1>
+        <p className="font-mono text-4xl">12</p>
+      </section>
+    </>
   );
 }
