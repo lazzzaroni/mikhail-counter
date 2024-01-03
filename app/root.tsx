@@ -73,7 +73,7 @@ export function App() {
       </head>
 
       <body>
-        <div className="mx-auto flex h-svh min-w-0 max-w-xl flex-auto flex-col justify-between p-4">
+        <div className="mx-auto flex h-svh min-w-0 max-w-5xl flex-auto flex-col justify-between p-4">
           <Header />
 
           <main className="mx-auto py-10">
