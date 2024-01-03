@@ -15,11 +15,12 @@ export function WhyDialog() {
         <Button
           variant="link"
           className="text-muted-foreground transition-colors duration-300 hover:text-foreground"
+          size="icon"
         >
           why?
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[450px]">
+      <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle className="mb-2">Short story</DialogTitle>
           <DialogDescription>
@@ -49,11 +50,8 @@ export function WhyDialog() {
             </p>
             <p className="leading-5 [&:not(:first-child)]:mt-4">
               So, I decided to create a counter. I'm not sure if I'll keep it
-              for a long time, but for now, it's fun.
-            </p>
-            <p className="leading-5 [&:not(:first-child)]:mt-4">
-              I'm planning to add some features, like admin functionality or
-              some animation on counter change. We'll see.
+              for a long time, but it's a good opportunity to learn new things
+              and practice. And it's fun.
             </p>
           </DialogDescription>
         </DialogHeader>
