@@ -56,8 +56,8 @@ RUN mkdir -p /data
 VOLUME /data
 
 # add shortcut for connecting to database CLI
-# $ fly ssh console -C database_cli
-RUN echo "#!/bin/sh\nset -xe\nsqlite3 \$DATABASE_URL" > /usr/local/bin/database_cli && chmod +x /usr/local/bin/database_cli
+# $ fly ssh console -C database-cli
+RUN echo "#!/bin/sh\nset -xe\nsqlite3 \$DATABASE_URL" > /usr/local/bin/database-cli && chmod +x /usr/local/bin/database-cli
 
 # Entrypoint prepares the database.
 ENTRYPOINT [ "/app/docker-entrypoint.js" ]
