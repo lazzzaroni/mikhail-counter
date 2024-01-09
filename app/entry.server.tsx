@@ -21,7 +21,7 @@ export default function handleRequest(
   remixContext: EntryContext,
   loadContext: AppLoadContext,
 ) {
-  return isbot(String(request.headers.get("user-agent")))
+  return isbot(request.headers.get("user-agent"))
     ? handleBotRequest(
         request,
         responseStatusCode,

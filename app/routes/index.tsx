@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { formatDistance, subDays } from "date-fns";
 import { getLastCounter } from "~/models/counter.server";
+
 export async function loader() {
   const data = await getLastCounter();
 
@@ -14,6 +15,7 @@ export async function loader() {
 
   return json(data);
 }
+
 export default function Index() {
   const { count, createdAt } = useLoaderData<typeof loader>();
 
