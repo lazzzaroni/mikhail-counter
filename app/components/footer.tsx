@@ -4,6 +4,7 @@ import {
   EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
 import { Link } from "@remix-run/react";
+
 import { WhyDialog } from "./why-dialog";
 
 export default function Footer() {
