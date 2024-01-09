@@ -15,9 +15,7 @@ const sessionStorage = createCookieSessionStorage({
     httpOnly: true,
     sameSite: "lax",
     secrets: [SESSION_SECRET],
-    ...(isProduction
-      ? { domain: "your-production-domain.com", secure: true }
-      : {}),
+    secure: isProduction,
   },
 });
 

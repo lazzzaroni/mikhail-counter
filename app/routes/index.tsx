@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { formatDistance, subDays } from "date-fns";
 import { getLastCounter } from "~/models/counter.server";
+
 export async function loader() {
   const data = await getLastCounter();
 
@@ -14,12 +15,13 @@ export async function loader() {
 
   return json(data);
 }
+
 export default function Index() {
   const { count, createdAt } = useLoaderData<typeof loader>();
 
   return (
     <section className="mx-auto flex flex-col items-center justify-center gap-12">
-      <p className="font-mono text-8xl tracking-tighter">{`{${count}}`}</p>
+      <p className="font-mono text-9xl">{count}</p>
       <p className="font-mono text-lg">
         {`updated `}
         <span className="text-muted-foreground">

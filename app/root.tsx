@@ -13,10 +13,6 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
-import faviconAssetUrl from "./assets/favicon.svg";
-import fontStylesheetUrl from "./styles/font.css";
-import tailwindStylesheetUrl from "./styles/tailwind.css";
-
 import clsx from "clsx";
 import {
   PreventFlashOnWrongTheme,
@@ -26,12 +22,20 @@ import {
 
 import Footer from "~/components/footer";
 import Header from "~/components/header";
+
+import faviconAssetUrl from "./assets/favicon.svg";
 import { themeSessionResolver } from "./sessions.server";
+import fontStylesheetUrl from "./styles/font.css";
+import tailwindStylesheetUrl from "./styles/tailwind.css";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Mikhail Counter" },
-    { name: "description", content: "Mikhail Counter" },
+    {
+      name: "description",
+      content:
+        "Revolutionary app for keeping track of how many times I've been called Mikhail",
+    },
   ];
 };
 export const links: LinksFunction = () => [
