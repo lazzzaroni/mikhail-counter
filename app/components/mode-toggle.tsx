@@ -1,5 +1,5 @@
-import { Theme, useTheme } from "remix-themes";
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
+import { Theme, useTheme } from "remix-themes";
 
 import { Button } from "./ui/button";
 

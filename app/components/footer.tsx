@@ -4,6 +4,7 @@ import {
   EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
 import { Link } from "@remix-run/react";
+
 import { WhyDialog } from "./why-dialog";
 
 export default function Footer() {
@@ -16,6 +17,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="size-auto transition-colors duration-300 hover:text-foreground hover:underline"
+          aria-label="GitHub profile"
         >
           <GitHubLogoIcon className="size-5" />
         </Link>
@@ -24,6 +26,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="size-auto transition-colors duration-300 hover:text-foreground hover:underline"
+          aria-label="LinkedIn profile"
         >
           <LinkedInLogoIcon className="size-5" />
         </Link>
@@ -31,6 +34,7 @@ export default function Footer() {
           to="mailto:mpaliakou.dev@gmail.com"
           target="_self"
           className="size-auto transition-colors duration-300 hover:text-foreground hover:underline"
+          aria-label="Email me"
         >
           <EnvelopeClosedIcon className="size-5" />
         </Link>
