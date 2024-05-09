@@ -14,6 +14,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 import clsx from "clsx";
+import { isbot } from "isbot";
 import {
   PreventFlashOnWrongTheme,
   ThemeProvider,
@@ -25,6 +26,7 @@ import Header from "~/components/header";
 
 import faviconAssetUrl from "./assets/favicon.svg";
 import { themeSessionResolver } from "./sessions.server";
+import { keepAwake } from "./sleep.server";
 import fontStylesheetUrl from "./styles/font.css";
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 
@@ -46,6 +48,10 @@ export const links: LinksFunction = () => [
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {
+  const isBot = isbot(request.headers.get("user-agent"));
+  if (!isBot) {
+    void keepAwake();
+  }
   const { getTheme } = await themeSessionResolver(request);
   return {
     theme: getTheme(),
