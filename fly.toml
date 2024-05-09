@@ -26,7 +26,7 @@ processes = [ ]
   script_checks = [ ]
   auto_stop_machines = true
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1 # set to 0 if you want to suspend the site when not in use
 
   [services.concurrency]
     hard_limit = 25
